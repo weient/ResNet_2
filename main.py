@@ -95,7 +95,7 @@ def train(epoch):
         inputs, targets = inputs.to(device), targets.to(device)
         optimizer.zero_grad()
         outputs, maps_t = net(inputs)
-        print("output maps_t:", len(maps_t))
+        #print("output maps_t:", len(maps_t))
         loss = criterion(outputs, targets)
         loss.backward()
         optimizer.step()
